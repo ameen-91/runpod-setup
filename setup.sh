@@ -22,14 +22,6 @@ update  () {
     # Authenticate using the token from the environment variable
     echo "$GITHUB_TOKEN" | gh auth login --with-token
 
-    # Verify login
-    if [ $? -eq 0 ]; then
-        echo "Successfully authenticated with GitHub CLI."
-    else
-        echo "Failed to authenticate with GitHub CLI."
-        exit 1
-    fi
-
 }
 
 update
