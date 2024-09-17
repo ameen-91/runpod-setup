@@ -13,6 +13,13 @@ update  () {
     echo "Installing essential packages..."
     sudo apt install gh -y
 
+    echo "Updating Python..."
+    sudo apt install python3.12 -y
+
+    echo "Installing Poetry..."
+    pip install poetry
+  
+
     # Check if the GITHUB_TOKEN environment variable is set
     if [ -z "$GITHUB_TOKEN" ]; then
         echo "Error: GITHUB_TOKEN environment variable is not set."
